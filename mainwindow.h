@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QStringList>
 #include <QPlainTextEdit>
+#include <QVector>
 
 
 namespace Ui {
@@ -19,6 +20,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
     QLabel * lbl;
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();

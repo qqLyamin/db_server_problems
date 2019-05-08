@@ -43,20 +43,3 @@ FORMS += \
         mainwindow.ui
 
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/./ -lqsqlmysqld4
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/./ -lqsqlmysqld4d
-else:unix: LIBS += -L$$PWD/./ -lqsqlmysqld4
-
-INCLUDEPATH += $$PWD/.
-DEPENDPATH += $$PWD/.
-
-unix|win32: LIBS += -lqsqlmysqld4
-
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../MySQL/lib/opt/ -llibmysql
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../MySQL/lib/opt/ -llibmysqld
-else:unix: LIBS += -L$$PWD/../../../../MySQL/lib/opt/ -llibmysql
-
-INCLUDEPATH += $$PWD/../../../../MySQL/lib/opt
-DEPENDPATH += $$PWD/../../../../MySQL/lib/opt
-
-unix|win32: LIBS += -llibmysql

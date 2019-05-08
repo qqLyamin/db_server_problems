@@ -3,7 +3,6 @@
 #include <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
 
-//C:\Program Files\MySQL\MySQL Server 8.0\bin
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,8 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         ui->plainTextEdit->appendPlainText(sl[i]);
     }
-
-    QSqlDatabase::addDatabase("QMYSQL");
+    QSqlDatabase::addDatabase("QODBC");
 }
 
 MainWindow::~MainWindow()
